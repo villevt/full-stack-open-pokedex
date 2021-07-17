@@ -15,4 +15,5 @@ app.listen(PORT, () => {
   console.log('server started on port 5000')
 })
 
-console.log("test with #skip")
+// eslint-disable-next-line no-console
+console.log('test with #skip')
