@@ -13,8 +13,6 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-        with:
-          fetch-dept: '0'
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
@@ -41,6 +39,12 @@ jobs:
           healthcheck: "https://eveningdew214.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
+  version_tag:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-dept: '0'
       - name: Bump version and push tag
         if: ${{ github.event_name == 'push' }}
         uses: anothrNick/github-tag-action@1.33.0
