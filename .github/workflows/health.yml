@@ -1,9 +1,8 @@
 name: Healthcheck
 
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs: 
   healthcheck:
@@ -13,4 +12,3 @@ jobs:
         uses: jtalk/url-health-check-action@v1.5
         with:
           url: https://eveningdew214.herokuapp.com/health
-          
