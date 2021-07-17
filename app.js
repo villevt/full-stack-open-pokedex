@@ -16,4 +16,4 @@ app.listen(PORT, () => {
 })
 
 // eslint-disable-next-line no-console
-console.log('test with #skip')
+console.log('a test with #skip')
